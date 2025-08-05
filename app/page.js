@@ -4,7 +4,7 @@ import styles from "./page.module.scss";
 import { useState, useEffect } from "react";
 
 import PixelBackground from "./components/PixelBackground";
-import ScrambleText from "./components/ScrambleText/Scrambletext";
+import ScrambleText from "./components/ScrambleText/ScrambleText";
 import ScrollOverlay from "./components/ScrollOverlay/ScrollOverlay";
 import ScrollFromRight from "./components/ScrollFromRight/ScrollFromRight";
 import Terminal from "./components/Terminal/Terminal";
