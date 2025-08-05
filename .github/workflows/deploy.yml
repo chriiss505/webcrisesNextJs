@@ -27,6 +27,12 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Verify out directory
+        run: |
+          ls -la ./out
+          echo "Contenido de out:"
+          find ./out -type f
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
