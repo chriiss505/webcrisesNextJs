@@ -1,6 +1,6 @@
 "use client";
 import { createElement, useState, useEffect } from "react";
-import ScrambleText from "../ScrambleText/Scrambletext";
+import ScrambleText from "../ScrambleText/ScrambleText";
 import styles from "./Navbar.module.scss";
 
 export default function Navbar() {
