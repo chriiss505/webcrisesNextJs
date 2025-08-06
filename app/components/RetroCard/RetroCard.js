@@ -16,6 +16,11 @@ export default function RetroCard({
   sinceYear = "1992",
   footerText = "PROPERTY OF CRISTINA SÁNCHEZ DESIGN STUDIO",
 }) {
+
+   // Añade el basePath en producción
+  const basePath = process.env.NODE_ENV === 'production' ? '/webcrisesNextJs' : '';
+  const fullPhotoSrc = `${basePath}${photoSrc}`;
+
   return (
     <div className={styles.retroCard}>
       <div className={styles.retroHeader}>
@@ -28,7 +33,7 @@ export default function RetroCard({
       </div>
       <div className={styles.retroBody}>
         <Image
-          src={photoSrc}
+          src={fullPhotoSrc}
           alt={name}
           width={100}
           height={120}

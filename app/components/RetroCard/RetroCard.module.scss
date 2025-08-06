@@ -6,7 +6,6 @@
   color: #a2f6f7;
   font-family: "VT323", monospace;
   font-size: 24px;
-
   padding: 10px;
   border: 2px solid #444;
   box-shadow: 0 0 10px #bbb;
@@ -19,25 +18,33 @@
     display: flex;
     justify-content: space-between;
     font-weight: bold;
+    font-family: VT323, monospace;
 
     .signal {
       font-size: 16px;
+          font-family: VT323, monospace;
     }
   }
 
   .retroId {
     .label {
       font-size: 24px;
+                font-family: VT323, monospace;
+
     }
 
     .name {
       font-size: 24px;
+                font-family: VT323, monospace;
+
     }
   }
 
   .retroBody {
     display: flex;
     gap: 10px;
+              font-family: VT323, monospace;
+
 
     .photo {
       width: 200px;
@@ -51,6 +58,8 @@
       flex-direction: column;
       gap: 4px;
       font-size: 16px;
+                font-family: VT323, monospace;
+
     }
   }
 
@@ -58,11 +67,15 @@
     border-top: 1px dashed #333;
     padding-top: 6px;
     font-size: 16px;
+              font-family: VT323, monospace;
+
   }
 
   .retroFooter {
     margin-top: 6px;
     font-size: 16px;
+              font-family: VT323, monospace;
+
     text-align: center;
     border-top: 1px solid #444;
     padding-top: 4px;
