@@ -18,6 +18,8 @@ import ComingSoon from "./components/ComingSoon/ComingSoon";
 export default function Home() {
   const [menuIsActive, setMenuIsActive] = useState(false);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+    const basePath = process.env.NODE_ENV === 'production' ? '/webcrisesNextJs' : '';
+
 
   const updateDimensions = () => {
     const { innerWidth, innerHeight } = window;
@@ -38,7 +40,7 @@ export default function Home() {
         <section id="hero" className={styles.hero}>
           <div className={styles.logoContainer}>
             <Image
-              src="/assets/images/logo.png"
+              src={`${basePath}/assets/images/logo.png`}
               alt="Logo"
               fill
               className={styles.floatingLogo}

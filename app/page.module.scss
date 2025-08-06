@@ -68,6 +68,11 @@
   src: url("../public/assets/fonts/Inconsolata.ttf") format("opentype");
 }
 
+@font-face {
+  font-family: "VT323";
+  src: url("../public/assets/fonts/VT323.ttf") format("opentype");
+}
+
 .main {
   padding-top: 70px; /* Igual a la altura del navbar */
 

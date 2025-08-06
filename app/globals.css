@@ -22,13 +22,13 @@ h2 {
   margin-top: 10px;
   color: #a3db7d;
   font-weight: 800;
-  font-family: "VT323", sans-serif; 
+  font-family: "VT323", monospace; 
 }
 
 p {
   font-size: 32px;
   color: #ffffff;
-  font-family: "VT323";
+  font-family: "VT323", monospace; 
   font-weight: 400;
 }
 

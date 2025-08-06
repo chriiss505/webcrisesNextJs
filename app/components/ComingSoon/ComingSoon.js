@@ -3,6 +3,9 @@ import React from "react";
 import styles from "./ComingSoon.module.scss";
 
 export default function ComingSoon() {
+  const basePath = process.env.NODE_ENV === 'production' ? '/webcrisesNextJs' : '';
+
+
   return (
     <section className={styles.comingSoonSection}>
       <div className={styles.retroHeader}>
@@ -12,7 +15,7 @@ export default function ComingSoon() {
 
       <video
         className={styles.videoBg}
-        src="/assets/videos/coming-soon.mp4"
+        src={`${basePath}/assets/videos/coming-soon.mp4`}
         autoPlay
         muted
         loop
