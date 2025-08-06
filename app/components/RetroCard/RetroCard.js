@@ -27,10 +27,7 @@ export default function RetroCard({
         <span>{headerText}</span>
         <span className={styles.signal}>{signalText}</span>
       </div>
-      <div className={styles.retroId}>
-        <span className={styles.label}>{officerLabel}</span>
-        <span className={styles.name}>{name}</span>
-      </div>
+     
       <div className={styles.retroBody}>
         <Image
           src={fullPhotoSrc}
@@ -40,6 +37,10 @@ export default function RetroCard({
           className={styles.photo}
         />
         <div className={styles.info}>
+           <div className={styles.retroId}>
+        <span className={styles.label}>{officerLabel}</span>
+        <span className={styles.name}>{name}</span>
+      </div>
           <p>
             <strong>{species}</strong>
           </p>

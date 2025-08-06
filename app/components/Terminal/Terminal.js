@@ -7,7 +7,7 @@ export default function Terminal() {
   const [input, setInput] = useState("");
   const [output, setOutput] = useState([
     { text: " MANIFESTO DEL COLECTIVO CRISES", type: "system" },
-    { text: "-------------------------------------", type: "system" },
+    { text: "--------------------", type: "system" },
     { text: "", type: "empty" },
     { text: "$ quienes somos", type: "command" },
     { text: "Las Crises", type: "response" },
