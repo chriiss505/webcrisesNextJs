@@ -2,13 +2,15 @@
 import { useState } from "react";
 import Image from "next/image";
 import styles from "./TeletextoGallery.module.scss";
+    const basePath = process.env.NODE_ENV === 'production' ? '/webcrisesNextJs' : '';
 
 const galleryImages = Array.from(
   { length: 17 },
-  (_, i) => `/assets/images/teletext/${i + 1}.png`
+  (_, i) => `${basePath}/assets/images/teletext/${i + 1}.png`
 );
 
 const TeletextoGallery = () => {
+
   const [selectedImage, setSelectedImage] = useState(galleryImages[0]);
 
   return (
@@ -16,7 +18,7 @@ const TeletextoGallery = () => {
       <div className={styles.retroHeader}>
         <span>// PROYECTO:-TELETEXTO™ — de nuevo en nuestras vidas</span>
         <span className={styles.signal}>
-          STATUS :: FINNISHED&&EXHIBITED ▓▓▓░░
+          STATUS :: EXHIBITED ✶
         </span>
       </div>
       <div className={styles.teletextoGrid}>

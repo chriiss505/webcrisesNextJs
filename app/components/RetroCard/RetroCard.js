@@ -4,7 +4,7 @@ import styles from "./RetroCard.module.scss";
 
 export default function RetroCard({
   headerText = "東京 CRISES ART COLLECTIVE",
-  signalText = "↳ CREATIVE INDEX: MAXED ◉◉◉◉◉◉▓▓▒░",
+  signalText = "STATUS :: CRE∆TING ≫",
   officerLabel = "SPECIES ",
   name = "CRISTINA SÁNCHEZ",
   photoSrc = "/default-photo.jpg",

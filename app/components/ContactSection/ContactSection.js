@@ -20,7 +20,7 @@ export default function ContactoSection() {
       {/* Estilo retroHeader igual que teletexto */}
       <div className={styles.retroHeader}>
         <span>// CONTACTO · CRISES ✶ STUDIO</span>
-        <span className={styles.signal}>CHANNEL :: ACTIVE ◉◉◉▓░</span>
+        <span className={styles.signal}>STATUS :: ONLINE ◉ </span>
       </div>
 
       <div className={styles.contactoBox}>

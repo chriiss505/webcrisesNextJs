@@ -10,7 +10,7 @@ export default function ComingSoon() {
     <section className={styles.comingSoonSection}>
       <div className={styles.retroHeader}>
         <span>// CANAL+ PROXIMAMENTE</span>
-        <span className={styles.signal}>STATUS :: WAITING</span>
+        <span className={styles.signal}>STATUS :: WAITING ☹</span>
       </div>
 
       <video
