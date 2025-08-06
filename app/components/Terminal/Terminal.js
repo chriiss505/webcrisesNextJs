@@ -6,27 +6,25 @@ export default function Terminal() {
   const [isMounted, setIsMounted] = useState(false);
   const [input, setInput] = useState("");
   const [output, setOutput] = useState([
-    { text: "Bienvenido al terminal de WEB-CRISES", type: "system" },
-    { text: "Escribe cualquier comando (o cualquier cosa)", type: "system" },
-    { text: "--------------------------------------", type: "system" },
-    { text: "SYSTEM MANIFESTO", type: "title" },
+    { text: " MANIFESTO DEL COLECTIVO CRISES", type: "system" },
+    { text: "-------------------------------------", type: "system" },
     { text: "", type: "empty" },
-    { text: "$ whoami", type: "command" },
-    { text: "web-crises-collective", type: "response" },
+    { text: "$ quienes somos", type: "command" },
+    { text: "Las Crises", type: "response" },
     { text: "", type: "empty" },
-    { text: "$ mission --show", type: "command" },
+    { text: "$ nuestra mision --show", type: "command" },
     {
       text: "[•] Fusionar arte y tecnología\n[•] Democratizar creación digital\n[•] Desafiar narrativas convencionales",
       type: "response",
     },
     { text: "", type: "empty" },
-    { text: "$ values --list", type: "command" },
+    { text: "$ nuestros valores --list", type: "command" },
     {
       text: "[✓] Transparencia radical\n[✓] Experimentación constante\n[✓] Colaboración interdisciplinar",
       type: "response",
     },
     { text: "", type: "empty" },
-    { text: "// Escribe cualquier comando y presiona Enter", type: "comment" },
+    { text: "Ya has leido suficiente ¿Quieres jugar?  Escribe Y para SI - N para NO y presiona intro", type: "comment" },
   ]);
   const inputRef = useRef(null);
   const terminalBodyRef = useRef(null);
@@ -44,33 +42,11 @@ export default function Terminal() {
     let responseText;
 
     if (command === "y") {
-      responseText = `
-           +      ,WWWWW,  WW   WW  WWWWWW,  WW  ,WWWWW, WWWWWWWW
-           +      WW'  WW  WW   WW  WW  'WW  WW  WW'  ''    WW
-           +      WW       WWWWWWW+ WWWWWW'  WW  'WWWWW,    WW
- +         +      WW.  WW  WW  +WW  WW+'WW.  WW  ,,  'WW    WW
-   ++     +++     'WWWWW'  WW   WW +WW  'WW. WW  'WWWWW'    WW
-     ++   +++   ++
- ++   +++ +++ +++   ++   +        +
-+   ++  +++++++  ++   ++   ++                      WW  ,WWWWW,
- + +  +++ +++ +++  + +                             WW  WW'
-++ +++++++++++++++++ +++++ +++  ++                 WW  'WWWWW,
- + +  +++ +++ +++  + +                             WW  ,   'WW
-+   ++  +++++++  ++   ++   ++                      WW  'WWWWW'
- ++   +++ +++ +++   ++   +        +
-     ++   +++   ++
-   ++     +++      ++        WWWWWW,  ,WWWWW,  WWWWWW,  WW.  WW
- +         +          +      WW   WW  WW   WW  WW  .WW  WWW. WW
-           +                 WWWWWW,  WW   WW  WWWWWW'  WW'W,WW
-           +                 WW   WW  WW   WW  WW 'WW.  WW 'WWW
-           +                 WWWWWW'  'WWWWW'  WW  'WW. WW  'WW
-
-
-`;
+      responseText = `Bienvenido a este juego interactivo [En construcción]`;
     } else if (command === "n") {
-      responseText = "NO SALVATION PROTOCOL INITIATED ▓░░░░";
+      responseText = "JEDET";
     } else {
-      responseText = "crises are artists";
+      responseText = "Solo respondo a [y/n]";
     }
 
     const newOutput = [

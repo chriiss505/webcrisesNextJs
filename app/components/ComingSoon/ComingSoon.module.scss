@@ -2,7 +2,9 @@
   position: relative;
   width: 100%;
   height: 60vh;
+  min-height: 400px; // Altura mínima para móviles
   background-color: #000;
+  box-shadow: 0 0 10px #bbb;
   font-family: "VT323", monospace;
   color: #ffffff;
   overflow: hidden;
@@ -17,20 +19,40 @@
   font-family: "Share Tech Mono", monospace;
   background-color: #0f0f0f;
   color: #00ff9f;
-  font-size: 0.85rem;
   padding: 0.6rem 1rem;
   border-bottom: 1px solid #333;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   box-shadow: inset 0 -1px 0 #222;
   z-index: 10;
+  
+  // Tamaño de fuente responsive
+  font-size: 0.85rem;
+  
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.8rem;
+  }
+  
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    padding: 0.4rem 0.6rem;
+  }
 
   .signal {
-  color: #ff2c75;
-  font-size: 12px;
-  font-weight: bold;
-  font-family:  monospace;
-  text-transform: uppercase;
+    color: #ff2c75;
+    font-weight: bold;
+    font-family: monospace;
+    text-transform: uppercase;
+    
+    // Tamaño de fuente responsive
+    font-size: 12px;
+    
+    @media (max-width: 768px) {
+      font-size: 10px;
+    }
   }
 }
 
@@ -52,11 +74,33 @@
   position: relative;
   z-index: 1;
   margin: auto;
-  font-size: 15rem;
   text-transform: uppercase;
   user-select: none;
   flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  
+  // Tamaño de fuente responsive
+  font-size: 15rem;
+  
+  @media (max-width: 1200px) {
+    font-size: 12rem;
+  }
+  
+  @media (max-width: 992px) {
+    font-size: 10rem;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 8rem;
+  }
+  
+  @media (max-width: 576px) {
+    font-size: 5rem;
+  }
+  
+  @media (max-width: 400px) {
+    font-size: 3.5rem;
+  }
 }

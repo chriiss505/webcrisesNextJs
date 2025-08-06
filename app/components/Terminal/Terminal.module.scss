@@ -2,6 +2,7 @@
 
 .terminal {
   background-color: #0a0a0a;
+  box-shadow: 0 0 10px #bbb;
   color: #a2f6f7;
   font-family: "VT323", monospace;
   font-size: 24px;
@@ -90,6 +91,8 @@
 
 .response {
   font-family: monospace;
+      text-transform: uppercase;
+font-size: 16px;
   white-space: pre-wrap;
   color: #a3db7d;
   animation: glitch 1s infinite steps(2, jump-none);

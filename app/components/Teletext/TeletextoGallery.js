@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import styles from "./TeletextoGallery.module.scss";
-    const basePath = process.env.NODE_ENV === 'production' ? '/webcrisesNextJs' : '';
+const basePath = process.env.NODE_ENV === 'production' ? '/webcrisesNextJs' : '';
 
 const galleryImages = Array.from(
   { length: 17 },
@@ -10,7 +10,6 @@ const galleryImages = Array.from(
 );
 
 const TeletextoGallery = () => {
-
   const [selectedImage, setSelectedImage] = useState(galleryImages[0]);
 
   return (
@@ -45,6 +44,9 @@ const TeletextoGallery = () => {
 
         {/* Columna derecha: Imagen principal */}
         <div className={styles.imagePlaceholder}>
+          <p className={styles.imageNote}>
+            Click en las imágenes para verlas mejor
+          </p>
           <Image
             src={selectedImage}
             alt="Imagen seleccionada"
@@ -53,12 +55,9 @@ const TeletextoGallery = () => {
             style={{ objectFit: "contain" }}
             priority
           />
-          <p className={styles.imageNote}>
-            Click en las imágenes para verlas mejor
-          </p>
         </div>
       </div>
-      {/* Primer carrusel (derecha a izquierda) */}
+      {/* Carruseles */}
       <div className={styles.galleryCarousel}>
         <div className={styles.carouselTrack}>
           {[...galleryImages, ...galleryImages].map((image, index) => (
@@ -79,7 +78,6 @@ const TeletextoGallery = () => {
           ))}
         </div>
       </div>
-      {/* Segundo carrusel (izquierda a derecha) */}
       <div className={styles.galleryCarousel}>
         <div className={`${styles.carouselTrack} ${styles.reverseScroll}`}>
           {[...galleryImages, ...galleryImages].map((image, index) => (

@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
-
 .teletextoSection {
   margin: 0 auto;
   font-family: "VT323";
@@ -10,11 +8,12 @@
   overflow: hidden;
   position: relative;
 }
+
 .retroHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family:  monospace;
+  font-family: monospace;
   background-color: #0f0f0f;
   color: #00ff9f;
   font-size: 0.85rem;
@@ -24,13 +23,24 @@
   letter-spacing: 0.08em;
   box-shadow: inset 0 -1px 0 #222;
 
-  .signal {
-  color: #ff2c75;
-  font-size: 12px;
-  font-weight: bold;
-  font-family:  monospace;
-  text-transform: uppercase;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    padding: 0.5rem;
+  }
 
+  .signal {
+    color: #ff2c75;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: monospace;
+    text-transform: uppercase;
+    
+    @media (max-width: 768px) {
+      font-size: 10px;
+    }
   }
 }
 
@@ -38,12 +48,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-
   padding: 2rem 0;
   backdrop-filter: blur(12px);
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 
@@ -52,16 +62,28 @@
   flex-direction: column;
   justify-content: center;
   border: 1px solid rgba(0, 255, 255, 0.13);
-  padding: 5px;
+  padding: 1rem;
   color: #a2f6f7;
+  min-height: 50vh; /* Altura mínima */
+  height: auto; /* Altura automática según contenido */
+  overflow-y: auto;
 
-  height: 70vh; /* altura más controlada */
-  overflow-y: auto; /* scroll interno si sobrepasa */
+  @media (max-width: 768px) {
+    min-height: auto;
+    height: auto;
+    padding: 0.8rem;
+  }
 }
+
 .subtitle {
   font-size: 1.2rem;
   color: #a2f6f7;
   margin-bottom: 1rem;
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
 }
 
 .description {
@@ -69,41 +91,53 @@
   font-size: 1.4rem;
   line-height: 1.5;
   text-transform: uppercase;
+  
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
 }
-
-
 
 .imagePlaceholder {
   position: relative;
   background: #0d0d0d;
   width: 100%;
-  height: 70vh; /* altura igual a la columna izquierda */
+  height: auto; /* Altura automática */
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   border: 1px solid rgba(0, 255, 255, 0.13);
-
-  padding-bottom: 0; /* eliminar padding-bottom para evitar aspecto cuadrado */
+  
+  @media (max-width: 768px) {
+    aspect-ratio: 1/1; /* Mantener relación cuadrada en móvil */
+  }
 }
 
 .imageNote {
   font-family: "Share Tech Mono", monospace;
-width: auto;
-height: auto;
+  width: auto;
+  height: auto;
   font-size: 0.9rem;
   color: #ccc;
   text-align: center;
   margin-top: 8px;
-    position: absolute;
-      top: 10px; /* distancia desde el top */
-
-
+  position: absolute;
+  top: 10px;
+  z-index: 2;
+  
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+    top: 5px;
+  }
 }
+
+/* Resto del CSS permanece igual */
 .divider {
   border-top: 1px dashed #bbb;
   margin: 0.5rem 0;
 }
+
 .mainImage {
   object-fit: contain;
   width: calc(100% - 20px);
